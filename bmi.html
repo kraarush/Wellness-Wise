@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Wellness Wise</title>
+        <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+        <!-- <link rel="stylesheet" href="bmi.css"> -->
+        <style>
+            .bmical {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 30%;
+                margin-right: 30%;
+                margin-top: 50px;
+                width: 40%;
+                border: 1px solid rgb(226, 110, 229);
+                border-radius: 10px;
+                padding-bottom: 14px;
+                box-shadow: 0px 0px 10px rgb(126, 48, 225);
+            }
+
+            #height,
+            #weight {
+                font-size: 17px;
+                padding: 14px 16px;
+                width: 90%;
+                margin-top: 20px;
+                border-radius: 10px;
+                margin-left: 5%;
+            }
+
+            #Calculate {
+                font-size: 17px;
+                padding: 10px 16px;
+                width: 40%;
+                margin-top: 20px;
+                border: 0px;
+                border-radius: 10px;
+                margin-left: 30%;
+                color: aliceblue;
+                background-color: rgb(226, 110, 229);
+            }
+
+            #Calculate:hover {
+                background-color: rgb(126, 48, 225);
+            }
+            h3 {
+                font-size: 17px;
+                margin-top: 10px;
+                justify-content: center;
+                text-align: center;
+            }
+        </style>
+        
+    </head>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-8 col-12 d-flex flex-wrap">
+
+                    <p class="d-flex mb-0">
+                        <i class="bi-envelope me-2"></i>
+
+                        <a href="mailto:info@company.com">
+                            WellnessWise@Sample.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                    <ul class="social-icon">
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-twitter"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-facebook"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-instagram"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-youtube"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-whatsapp"></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <span>
+                    Wellness Wise
+                    <small># Improve Health Journey</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="./index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="./bmi.html" target="_blank">BMI</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="./login.html" target="_blank">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#contactMefooter">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="bmical">
+            <div class="height">
+                <input type="text" id="height" name="username" placeholder="Enter height in cm" required>
+            </div>
+            <div class="weight">
+                <input type="text" id="weight" name="username" placeholder="Enter weight in kg" required>
+            </div>
+            <div class="cal">
+                <button type="submit" id="Calculate">Calculate BMI</button>
+            </div>
+            <div class="result">
+                <b><h3 id="result"></h3></b>
+                <b><h3 id="bmirange"></h3></b>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const heightInput = document.getElementById("height");
+            const weightInput = document.getElementById("weight");
+            const calculateButton = document.getElementById("Calculate");
+            const resultParagraph = document.getElementById("result");
+            const bmiRangeParagraph = document.getElementById("bmirange");
+        
+            function calculateBMI() {
+                const height = parseFloat(heightInput.value);
+                const weight = parseFloat(weightInput.value);
+        
+                if (isNaN(height) || isNaN(weight)) {
+                    resultParagraph.innerHTML = "Please enter valid numbers for height and weight.";
+                    return;
+                }
+        
+                const bmi = weight / ((height / 100) ** 2);
+                resultParagraph.textContent = "Your BMI is: " + bmi.toFixed(2);
+        
+                // Determine BMI range
+                let bmiRange;
+                if (bmi < 18.5) {
+                    bmiRange = "Underweight";
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    bmiRange = "Normal weight";
+                } else if (bmi >= 25 && bmi < 30) {
+                    bmiRange = "Overweight";
+                } else {
+                    bmiRange = "Obese";
+                }
+        
+                bmiRangeParagraph.textContent = "Your BMI range is: " + bmiRange;
+            }
+        
+            calculateButton.addEventListener("click", calculateBMI);
+        });
+        </script>
+</body>
+
+</html>

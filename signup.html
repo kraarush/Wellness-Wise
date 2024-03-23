@@ -1,21 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="signup.css">
+    <title>Wellness Wise</title>
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+    <style>
+
+        #top {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 5%;
+            margin-top: 20px;
+            margin-right: 5%;
+        }
+
+        #topimg {
+            width: 100px;
+            cursor: pointer;
+        }
+
+        #topside {
+            display: inline-flex;
+            justify-content: space-around;
+        }
+
+        span {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #welcome {
+            padding-left: 100px;
+            font-size: 40px;
+            justify-content: center;
+        }
+
+        #signupbox {
+            display: flex;
+            flex-direction: column;
+            margin-top: 125px;
+            margin-left: 20%;
+            margin-right: 12%;
+        }
+
+        #username {
+            font-size: 17px;
+            padding: 14px 16px;
+            width: 330px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        #email {
+            font-size: 17px;
+            padding: 14px 16px;
+            width: 330px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        #password {
+            font-size: 17px;
+            padding: 14px 16px;
+            width: 330px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        #signup {
+            background-color: rgb(226, 110, 229);
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            padding: 0 16px;
+            width: 360px;
+            margin-top: 20px;
+            color: rgb(243, 248, 255);
+            border-radius: 10px;
+
+        }
+
+        #signup:hover {
+            background-color: rgb(126, 48, 225);
+        }
+
+        .contain {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #midimg {
+            margin-top: 10px;
+            margin-left: 30%;
+        }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 d-flex flex-wrap">
+
+                    <p class="d-flex mb-0">
+                        <i class="bi-envelope me-2"></i>
+
+                        <a href="mailto:info@company.com">
+                            WellnessWise@Sample.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                    <ul class="social-icon">
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-twitter"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-facebook"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-instagram"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-youtube"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-whatsapp"></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <span>
+                    Wellness Wise
+                    <small># Improve Health Journey</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="./index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="./bmi.html" target="_blank">BMI</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="./project/login.html" target="_blank">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#contactMefooter">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div id="top">
-        <img src="logo.png" id="topimg">
+        <img src="" id="topimg">
         <div id="topside">
             <span href="" style="color: rgb(33, 23, 23);">Already a user?</span>
             <span href="" style="color: rgb(81, 61, 239); cursor: pointer;"><a href="./login.html">Login</a></span>
         </div>
 
     </div>
-    <div class="container">
+    <div class="contain">
         <div>
             <img src="logo2.jpg" id="midimg">
         </div>
@@ -40,6 +219,7 @@
 
     </div>
 
-    
+
 </body>
+
 </html>
