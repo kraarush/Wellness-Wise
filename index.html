@@ -16,7 +16,7 @@
 
     <link href="css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -70,7 +70,7 @@
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
                 <span>
-                    Wellness Wise
+                    <h1>Wellness Wise</h1>
                     <small># Improve Health Journey</small>
                 </span>
             </a>
@@ -104,8 +104,8 @@
 
     <main>
 
-        <section class="hero-section hero-section-full-height">
-            <div class="container-fluid">
+        <section class="hero-section hero-section-full-height" >
+            <div class="container-fluid" >
                 <div class="row">
 
                     <div class="col-lg-12 col-12 p-0">
@@ -161,17 +161,17 @@
 
 
         <section class="section-padding">
-            <div class="container">
+            <div class="container" >
                 <div class="row">
 
                     <div class="col-lg-10 col-12 text-center mx-auto">
                         <h2 class="mb-5">Welcome to Wellness Wise ⛹️‍♂️ !!</h2>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0" style="padding: 20px;">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="./bmi.html" class="d-block">
-                                <img src="images/icons/bmi.png" class="featured-block-image img-fluid" alt="">
+                                <img src="images/icons/bmi.png"  class="featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text"><Strong>BMI</Strong> Calculator</p>
                             </a>
@@ -263,7 +263,7 @@
                     <div class="col-lg-6 col-12">
                         <h2 class="text-white mb-4" id="joinCommunity">Steps towards Health !!</h2>
 
-                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="submit" method="post" role="form">
                             <h3 class="mb-4">Join Our Community today 😉 !!</h3>
 
                             <div class="row">
@@ -273,29 +273,28 @@
                                 </div>
 
                                 <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-email" id="volunteer-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Age" required>
+                                    <input type="text" name="volunteer-age" id="volunteer-age" class="form-control" placeholder="Age" required>
                                 </div>
 
                                 <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
+                                    <input type="text" name="volunteer-weight" id="volunteer-weight"
                                         class="form-control" placeholder="Weight in kgs" required>
                                 </div>
 
                                 <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
+                                    <input type="text" name="volunteer-gender" id="volunteer-gender"
                                         class="form-control" placeholder="Gender" required>
                                 </div>
 
                                 <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
+                                    <input type="text" name="volunteer-height" id="volunteer-height"
                                         class="form-control" placeholder="Height in cm" required>
                                 </div>
 
 
                             </div>
 
-                            <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
+                            <textarea name="volunteer-goals" rows="3" class="form-control" id="volunteer-goals"
                                 placeholder="Wellness Goals ..... !!"></textarea>
 
                             <button type="submit" class="form-control">Submit</button>
@@ -307,7 +306,7 @@
                         <div class="custom-block-body text-center" style="margin: 95px 4.5">
                             <h4 class="text-white mt-lg-3 mb-lg-3">Why Fitness ??</h4>
 
-                            <p class="text-white">Well Well </p>
+                            <p class="text-white">Well Well</p>
                             <p class="text-white">
                                 Fitness is vital for holistic well-being, improving physical health, mental clarity, and
                                 emotional stability. Regular exercise strengthens the body, reducing the risk of chronic
@@ -381,12 +380,6 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-6 col-md-7 col-12">
-                        <p class="copyright-text mb-0" id="contactMe">Copyright © 2036 <a href="#">Kind Heart</a>
-                            Charity Org.
-                            Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a></p>
-                    </div>
-
                     <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
                         <ul class="social-icon">
                             <li class="social-icon-item">
@@ -417,7 +410,7 @@
     <script src="js/click-scroll.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
-
+    <script src="./Backend/index.js"></script>
 </body>
 
 </html>
