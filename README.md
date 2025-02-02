@@ -3,7 +3,7 @@
 
 Team name - Coding Elites
 
-Link To Our Website :- https://coderaark12.github.io/CN240/
+Link To Our Website :- https://kraarush.github.io/Wellness-Wise/
 
 Problem Code - WD207
 
